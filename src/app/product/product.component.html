@@ -1,0 +1,49 @@
+<div [style]="{background:'url(assets/nikeBg.jpg)', backgroundRepeat:'repeat', overflow:'hidden'}">
+<div class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" [style]="{margin: '5px', padding: '5px', border: '1px solid black', borderRadius: '5px'}">
+        <a class="navbar-brand"><img src="assets/logoNike1.png" [style]="{width:'100px', height:'50px', objectFit:'', marginLeft: '20px'}" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <img src="assets/nikeBanner.jpg" [style]="{width:'100%', height:'500px', objectFit:'cover', borderRadius: '5px', margin: '10px'}" alt="">
+    <h3 [style]="{margin: '5px', padding: '5px',color:'white'}">Product List</h3>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let items of product">
+        <div class="card" [style]="{width:'100%', margin: '5px'}">
+          <div>
+            <img [src]="items.imgsrc" [style]="{width:'100%', height:'500px', objectFit:'cover',}" alt="">
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">{{items.name}}</h4>
+            <h5>{{items.price}} ₱</h5>
+            <p>Description:</p>
+            <p class="card-text">{{items.description}}</p>
+            <p>Colors:</p>
+            <p class="card-text">{{items.color}}</p>
+            <p>Sizes:</p>
+            <p class="card-text">{{items.size}}</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="#" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
